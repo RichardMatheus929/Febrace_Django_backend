@@ -1,3 +1,4 @@
+from typing import Any
 from django.db import models
 
 # Create your models here.
@@ -9,3 +10,5 @@ class Projeto(models.Model):
     estado = models.CharField(max_length=50)
     ano = models.CharField(max_length=10)
 
+    def __str__(self) -> str:
+        return self.nome

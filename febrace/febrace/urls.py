@@ -20,7 +20,7 @@ from rest_framework import routers
 from projetos.api.ViewSet import ProjetoViewSet
 
 router = routers.DefaultRouter()
-router.register(r'projeto',ProjetoViewSet)
+router.register(r'projetos',ProjetoViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

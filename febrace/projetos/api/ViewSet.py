@@ -9,14 +9,8 @@ from .Serializers import ProjetoSerializer
 class ProjetoViewSet(ModelViewSet):
     queryset = Projeto.objects.all()
     serializer_class = ProjetoSerializer
-    filter_backends = [filters.SearchFilter]
-    search_fields = ('$nome',
-                     '$categoria_premiacao',
-                     '$escola',
-                     '$cidade',
-                     '$estado',
-                     'ano'
-                     )
+    # filter_backends = [filters.SearchFilter]
+    filterset_fields = ['id', 'ano']
 
     # def list(self, request, *args, **kwargs):
     #     # Obtém os parâmetros da query string

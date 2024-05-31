@@ -4,10 +4,12 @@ from projetos.models import Projeto
 class ProjetoSerializer(ModelSerializer):
     class Meta:
         model = Projeto
-        fields = ('nome',
-                  'categoria_premiacao',
-                  'escola',
-                  'cidade',
-                  'estado',
-                  'ano'
+        fields = (
+                'id',
+                'nome',
+                'categoria_premiacao',
+                'cidade',
+                'escola',
+                'estado',
+                'ano'
                   )
